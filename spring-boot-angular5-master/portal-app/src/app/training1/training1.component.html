@@ -1,0 +1,161 @@
+
+    <style>
+    h2{
+    text-align:center;
+    
+    font-family:'Times New Roman', Times, serif;}
+     th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    td,th{
+      border: 1px solid black;}
+      .button {
+        background-color: navy;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 0px;
+        cursor: pointer;
+      }
+    </style>
+    
+    <body>
+      <a routerLink="/learning" class="button">BACK</a></body>
+      <p id="demo"></p>
+
+    
+  
+<div class="col-md-6">
+    <h2> TRAINING DETAILS</h2>
+    <br>
+    <br>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+         
+        <th>PROGRESS</th>
+        <th>COMMISSIONAMOUNT</th>
+        <th>RATING</th>
+
+        <th>STARTDATE</th>
+        <th>ENDDATE</th>
+        <th>STARTTIME</th>
+        <th>ENDTIME</th>
+        <th>AMOUNTRECEIVED</th>
+       
+       <th>AMOUNTTOMENTOR</th>
+      
+   
+     <th>fees</th>
+     <th>status</th>
+     <th>SLIP</th>
+     
+   
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let training of trainings">
+        <td class="hidden">{{training.id}}</td>
+        <td> <circle-progress
+          [percent]="training.progress"
+          [radius]="25"
+          [outerStrokeWidth]="8"
+          [innerStrokeWidth]="4"
+          [outerStrokeColor]="'#808080'"
+          [innerStrokeColor]="'#C0C0C0'"
+          [animation]="true"
+          [animationDuration]="200"
+        ></circle-progress></td>
+        <td>{{training.commissionAmount}}</td>
+        <td>{{training.rating}}</td>
+        <td>{{training.startDate}}</td>
+        <td>{{training.endDate}}</td>
+        <td>{{training.startTime}}</td>
+        <td>{{training.endTime}}</td>
+        <td>{{training.amountRecieved}}</td>
+        
+        <td>{{training.amountToMentor}}</td>
+       
+        <td>{{training.fees}}</td>
+        <td>{{training.status}}</td>
+        <td><button class="btn btn-danger" (click)="getPaymentby(training.id)"> Payment Slip</button></td>
+      </tr>
+      </tbody>
+    </table> 
+   
+     
+    <h2>MENTOR DETAILS</h2>
+<br>
+<br>
+<table class="table table-striped">
+<thead>
+<tr>
+  <th class="hidden">ID</th>
+  
+  <th>FIRSTNAME</th>
+  <th>LASTNAME</th>
+  <th>EMAIL</th>
+  <th>USERNAME</th>
+  <th>PASSWORD</th>
+  <th>CONTACTNUMBER</th>
+  <th>REGCODE</th>
+  <th>LINKEDINURL</th>
+  <th>ROLE</th>
+  <th>YEARSOFEXPERIENCE</th>
+  <th>ACTIVE</th>
+  <th>CONFIRMEDSIGNUP</th>
+  <th>RESETPASSWORD</th>
+  <th>RESETPASSWORDDATE</th>
+  <th>TIMEZONE</th>
+  <th>RATING</th>
+  <th>MENTOR PROFILE</th>
+  
+  
+  
+  
+  
+  
+  
+ 
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let training of trainings">
+  <td class="hidden">{{training.mentor.id}}</td>
+  <td>{{training.mentor.firstName}}</td>
+  <td>{{training.mentor.lastName}}</td>
+ 
+  <td>{{training.mentor.email}}</td>
+  <td>{{training.mentor.userName}}</td>
+  <td>{{training.mentor.password}}</td>
+  <td>{{training.mentor.contactNumber}}</td>
+  <td>{{training.mentor.regCode}}</td>
+  <td>{{training.mentor.linkedinUrl}}</td>
+  <td>{{training.mentor.role}}</td>
+  <td>{{training.mentor.yearsOfExperience}}</td>
+  <td>{{training.mentor.active}}</td>
+  <td>{{training.mentor.confirmedSignUp}}</td>
+  <td>{{training.mentor.resetPassword}}</td>
+  <td>{{training.mentor.resetPasswordDate}}</td>
+  <td>{{training.mentor.rating}}</td>
+  <td>{{training.mentor.timezone}}</td>
+  <td>{{training.mentor.mentor_profile}}</td>
+  
+</tr>
+</tbody>
+</table><br>
+<br>
+</div>
+
+
+   
+  

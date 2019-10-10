@@ -1,0 +1,131 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+    .button {
+        background-color: navy;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    form {
+        border: groove;
+    }
+</style>
+
+<body>
+    <a routerLink="/learning" class="button">HOME</a></body>
+
+<div class="container emp-profile">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="data:image/png;base64,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"
+                        alt="" />
+                   
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <br>
+                    <br>
+                    <h5>
+                        Name:{{user.firstName}}
+                    </h5>
+                    <h5>
+                        Role:{{user.role}}
+                    </h5>
+                    <h5 class="proile-rating">Active: <span>{{user.active}}</span></h5>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" routerLink="/aprofile" role="tab"
+                                aria-controls="home" aria-selected="true">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" routerLink="/contact1" role="tab"
+                                aria-controls="profile" aria-selected="false">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+             
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <b>
+                            <h3 style="color:brown;font-family: Georgia, 'Times New Roman', Times, serif">USER DETAILS</h3>
+                        </b>
+                        <div class="row">
+
+
+                            <div class="col-md-6">
+                                <label>USER ID</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p> {{user.id}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>NAME</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.firstName}} {{user.lastName}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>EMAIL</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.email}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>MOBILE NUMBER</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.contactNumber}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>EXPERIENCE</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{user.yearsOfExperience}}</p>
+                            </div>
+                        </div>
+                    </div>
+</div>
+</div>
+</div>
+
+            
+    
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>

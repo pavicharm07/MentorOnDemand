@@ -1,0 +1,92 @@
+<style>
+    .button {
+      background-color: navy;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 0px;
+      cursor: pointer;
+    }
+    h1{
+      color:red;
+    }
+    th{
+      color:brown;
+    }
+    </style>
+    
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+<a routerLink="/training1" class="button">BACK</a></body>
+<div class="container">
+    <div class="row">
+        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <address>
+                        <strong>Learning studio</strong>
+                        <br>
+                        bangalore
+                        
+                        <br>
+                        <abbr title="Phone">P</abbr>+9597015642
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                    <p>
+                        <em>Date: 1st November, 2018</em>
+                    </p>
+                    <p>
+                        <em>Receipt :#458967NP</em>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <h1>Payment Receipt</h1>
+              
+               
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>TXNTYPE</th>
+                            <th>AMOUNT</th>
+                            <th>REMARKS</th>
+                        
+                            <th>MENTORID</th>
+                            <th>TRAINING ID</th>
+                            <th>PAYMENT TYPE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                            <tr *ngFor="let payment of userPayments">
+                                <td>{{payment.id}}</td>
+                                 <td>{{payment.txnType}}</td>
+                                 <td>{{payment.amount}}</td>
+                                 <td>{{payment.remarks}}</td>
+                                 <td>{{payment.mentorId}}</td>
+                                 <td>{{payment.trainingId}}</td>
+                                 <td>{{payment.paymentType}}</td>
+                               
+                        </tr>
+                      
+                      
+                        
+                    </tbody>
+                </table>
+               
+            </div>
+        </div>
+    </div>

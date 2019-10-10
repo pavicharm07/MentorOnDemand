@@ -1,0 +1,68 @@
+
+<style>
+    h2{
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;}
+     th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    td,th{
+      border: 1px solid black;} .button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+</style>
+
+
+
+
+
+<body>
+
+  <a routerLink="/mentor1" class="button">BACK</a><div class="col-md-6">
+        <h2>PAYMENT DETAILS</h2>
+        <br>
+        <br>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th class="hidden">Id</th>
+             
+            <th>TXNTYPE</th>
+            <th>AMOUNT</th>
+            <th>REMARKS</th>
+    
+            <th>MENTORID</th>
+            <th>TRAINING ID</th>
+            <th>PAYMENT TYPE</th>
+         
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let payment of payments">
+            <td class="hidden">{{payment.id}}</td>
+            <td>{{payment.txnType}}</td>
+            <td>{{payment.amount}}</td>
+            <td>{{payment.remarks}}</td>
+            <td>{{payment.mentorId}}</td>
+            <td>{{payment.trainingId}}</td>
+            <td>{{payment.paymentType}}</td>
+            
+           
+          </tr>
+          </tbody>
+        </table>
+        </div>
+    

@@ -1,0 +1,75 @@
+<style>
+    h2{
+    text-align:center;
+    color:brown;
+    font-family: 'Times New Roman', Times, serif;}
+    label{
+    font-family: 'Times New Roman', Times, serif;}
+    .bg{
+      background-color:honeydew;
+    }
+    .button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <a routerLink="/mentor1" class="button">BACK</a></body>
+
+      
+      <div class="cointainer">
+        <div class="row">
+          <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+<div class=bg>
+  <h2 class="text-center">Add Skill</h2>
+<form>
+
+    <div class="form-group">
+        <label for="id">ID :</label>
+        <input type="id" [(ngModel)]="skill.id" placeholder="id" name="id" class="form-control" id="id">
+      </div>
+     
+  <div class="form-group">
+    <label for="name">NAME:</label>
+    <input type="name" [(ngModel)]="skill.name" placeholder="name" name="name" class="form-control" id="name">
+  </div>
+
+  <div class="form-group">
+    <label for="toc">TOC:</label>
+    <input [(ngModel)]="skill.toc" placeholder="toc" name="toc" class="form-control" id="toc">
+  </div>
+
+  <div class="form-group">
+    <label for="prerequisties">PREREQUSTIES:</label>
+    <input [(ngModel)]="skill.prerequisties" placeholder="prerequisties" name="prerequisties" class="form-control" id="prerequisties">
+  </div>
+
+  <div class="form-group">
+      <label for="createdAt">CREATEDAT:</label>
+      <input [(ngModel)]="skill.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+    </div>
+
+    <div class="form-group">
+        <label for="updatedAt">UPDATEDAT:</label>
+        <input [(ngModel)]="skill.updatedAt" placeholder="updatedAt" name="updatedAt" class="form-control" id="updatedAt">
+      </div>
+  
+
+
+  <button class="btn btn-success" (click)="createSkill()">Create</button>
+</form>
+</div>
+</div>
+</div>
+</div>

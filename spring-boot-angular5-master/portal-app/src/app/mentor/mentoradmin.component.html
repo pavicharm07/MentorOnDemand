@@ -1,0 +1,94 @@
+<div class="col-md-6">
+
+    <style>
+    h2{
+    text-align:center;
+    
+    font-family:'Times New Roman', Times, serif;}
+     th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    td,th{
+      border: 1px solid black;}
+      .button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <a routerLink="/admin1" class="button">BACK</a></body>
+<h2>MENTOR DETAILS</h2>
+      <br>
+      <br>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">ID</th>
+        
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>EMAIL</th>
+        <th>USERNAME</th>
+        <th>PASSWORD</th>
+        <th>CONTACTNUMBER</th>
+        <th>REGCODE</th>
+        <th>LINKEDINURL</th>
+        <th>ROLE</th>
+        <th>YEARSOFEXPERIENCE</th>
+        <th>ACTIVE</th>
+        <th>CONFIRMEDSIGNUP</th>
+        <th>RESETPASSWORD</th>
+        <th>RESETPASSWORDDATE</th>
+        <th>TIMEZONE</th>
+        <th>RATING</th>
+        <th>MENTOR PROFILE</th>
+        
+        
+        
+        
+        
+        
+        
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let mentor of mentors">
+        <td class="hidden">{{mentor.id}}</td>
+        <td>{{mentor.firstName}}</td>
+        <td>{{mentor.lastName}}</td>
+        <td>{{mentor.email}}</td>
+        <td>{{mentor.userName}}</td>
+        <td>{{mentor.password}}</td>
+        <td>{{mentor.contactNumber}}</td>
+        <td>{{mentor.regCode}}</td>
+        <td>{{mentor.linkedinUrl}}</td>
+        <td>{{mentor.role}}</td>
+        <td>{{mentor.yearsOfExperience}}</td>
+        <!-- <td>{{user.active}}</td> -->
+        <td  contenteditable="true"><textarea [(ngModel)]="mentor.active" style="resize: none;" maxlength="5">{{mentor.active}}</textarea></td>
+        <td>{{mentor.confirmedSignUp}}</td>
+        <td>{{mentor.resetPassword}}</td>
+        <td>{{mentor.resetPasswordDate}}</td>
+        <td>{{mentor.rating}}</td>
+        <td>{{mentor.timezone}}</td>
+        <td>{{mentor.mentor_profile}}</td>
+        <td><button class="btn btn-danger" (click)="updateMentor(mentor)"> Update Mentor</button></td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    

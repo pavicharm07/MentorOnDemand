@@ -1,0 +1,66 @@
+<style>
+    h2{
+    text-align:center;
+    
+    font-family:'Times New Roman', Times, serif;}
+     th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    td,th{
+      border: 1px solid black;}.button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <a routerLink="/mentor1" class="button">BACK</a></body>
+
+
+
+<div class="col-md-6">
+  <h2> Skill Details</h2>
+  <br>
+  <br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>NAME</th>
+      <th>TOC</th>
+      
+      <th>PREREQUISTIES</th>
+      <th>CREATEDAT</th>
+      <th>UPDATEDAT
+      </th>
+      <th>TRAININGID</th>
+      <th>ACTION</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let skill of skills">
+      <td>{{skill.id}}</td>
+      <td>{{skill.name}}</td>
+      <td>{{skill.toc}}</td>
+      <td>{{skill.trainingId}}</td>
+      <td>{{skill.prerequisties}}</td>
+      <td>{{skill.createdAt | date}}</td>
+      <td>{{skill.updatedAt | date}}</td>
+      
+      <td><button class="btn btn-danger" (click)="deleteSkill(skill)"> Delete Skill</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>

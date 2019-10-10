@@ -1,0 +1,78 @@
+<style>
+    h2{
+    text-align:center;
+    color:brown;
+    font-family: 'Times New Roman', Times, serif;}
+    label{
+    font-family: 'Times New Roman', Times, serif;}
+    .bg{
+      background-color:honeydew;
+    } .button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+</style>
+
+
+
+
+
+<body>
+
+  <a routerLink="/mentor1" class="button">BACK</a>
+    
+     
+      <div class="cointainer">
+        <div class="row">
+          <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+<div class=bg>
+  <h2 class="text-center">Add Technology</h2>
+<form>
+  
+  
+    <div class="form-group">
+        <label for="id">Id:</label>
+        <input [(ngModel)]="technology.id" placeholder="id" name="id" class="form-control" id="id">
+      </div>
+    
+
+  <div class="form-group">
+    <label for="techname">TECHNOLOGY NAME:</label>
+    <input [(ngModel)]="technology.techname" placeholder="techname" name="techname" class="form-control" id="techname">
+  </div>
+
+  <div class="form-group">
+    <label for="description">DESCRIPTION:</label>
+    <input [(ngModel)]="technology.description" placeholder="description" name="description" class="form-control" id="description">
+  </div>
+  <div class="form-group">
+    <label for="createdAt">CREATED AT:</label>
+    <input [(ngModel)]="technology.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+  </div>
+
+  
+  <div class="form-group">
+    <label for="updatedAt">UPDATED AT:</label>
+    <input [(ngModel)]="technology.updatedAt" placeholder="updatedAt" name="updatedAt" class="form-control" id="updatedAt">
+  </div>
+
+  
+
+  
+
+  
+  
+
+  <button class="btn btn-success" (click)="createTechnology()">Create</button>
+</form>
+</div>

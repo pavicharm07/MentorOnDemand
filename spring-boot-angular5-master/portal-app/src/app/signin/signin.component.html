@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+h1{
+  text-align:center;
+  color:brown;
+  font-family: 'Times New Roman', Times, serif;
+}
+p{
+  color:darkblue;
+  font-family: 'Times New Roman', Times, serif;
+}
+* {
+  box-sizing: border-box;
+  padding-top:10px;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  width:100%;
+  padding:15px;
+  margin:5px 0 22px 0;
+  display:inline-block;
+  border:none;
+  background:#f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+
+
+/* Add a blue text color to links */
+a {
+  color: rgb(248, 6, 6);
+}
+.img-align {
+text-align:center;
+}
+.container-fluid1 {
+  width: 1500px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+body{
+  background-image:url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  min-height:350px;
+  background-repeat: no-repeat;
+
+  background-attachment:fixed;
+  background-size:cover;
+  font-size:15px;
+
+}
+
+  .button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+</style>
+
+
+</head>
+
+
+<body>
+ 
+    <a routerLink="/index" class="button">BACK</a>
+    <div class="img-align" style=" position:right;">
+        <img src="https://indywithkids.com/wp-content/uploads/2018/02/The-Learning-Studio-Logo.png" alt="responsive-images" width="230" height="200"/>
+       
+        </div>
+
+<div class="search-container">
+    <button class="btn btn-success" routerLink="/trainingpay" style="float: right;"> VIEW ALL TRAININGS</button> 
+ 
+  <form action="/action_page.php">
+    <label for="startDate"><b>START DATE</b></label>  <input style="width:10%;" [(ngModel)]="startDate" placeholder="startDate" name="startDate" class="form-control" id="startDate">
+    <label for="endDate"><b>END DATE</b></label> <input style="width:10%" [(ngModel)]="endDate" placeholder="endDate" name="endDate" class="form-control" id="endDate">
+      <td> <button  (click)="findtraining(startDate,endDate)">SEARCH</button></td>
+ 
+    </form> </div>
+   
+ 
+  
+<br>
+<br>
+<br>
+
+
+  <div class="container">
+    <b><h1>LEARNING STUDIO</h1></b>
+    <p><b>ENTER YOUR LOGIN CREDENTIALS:</b></p>
+    <hr>
+  
+    <label for="userName"><b>USERNAME</b></label>
+    <input [(ngModel)]="user.userName" placeholder="userName" name="userName" class="form-control" id="userName">
+<br>
+<br>
+    <label for="password"><b>PASSWORD</b></label>
+    <input [(ngModel)]="user.password" placeholder="password" name="password" class="form-control" id="password">
+    <hr>
+   
+
+    
+  
+  
+   <!-- <a routerLink="/learning"><button>submit</button></a> -->
+   <td><button  (click)="validate(user.userName,user.password)">SUBMIT</button></td>
+ 
+
+  <div class="container signin">
+      <p>Dont have an account? <a routerLink="/add">Sign up</a>.</p>
+    </div>
+     </div>                       
+
+<br>
+<br>
+<br>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:red;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+body{
+  background-image:url(https://i.pinimg.com/originals/ae/48/66/ae4866824012b855e82a358960c1d0d6.jpg);
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center">COURSE DETAILS</h1>
+<ul>
+  <li><a routerLink="/signin">Home</a></li>
+  <li><a routerLink="/coursedetails">Course Details</a></li>
+  <li><a routerLink="/contact">Contact</a></li>
+</ul>
+
+</body>
+</html>

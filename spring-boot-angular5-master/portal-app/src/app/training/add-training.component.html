@@ -1,0 +1,104 @@
+<style>
+    h2{
+    text-align:center;
+    color:brown;
+    font-family: 'Times New Roman', Times, serif;}
+    label{
+    font-family: 'Times New Roman', Times, serif;}
+    .bg{
+      background-color:honeydew;
+    }
+    .button {
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 0px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <a routerLink="/admin1" class="button">BACK</a></body>
+
+     
+      <div class="cointainer">
+        <div class="row">
+          <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+<div class=bg>
+  <h2 class="text-center">ADD TRAINING</h2>
+<form>
+    <div class="form-group">
+        <label for="id">Id:</label>
+        <input [(ngModel)]="training.id" placeholder="id" name="progress" class="form-control" id="id">
+      </div>
+
+  <div class="form-group">
+      <label for="progress">PROGRESS:</label>
+      <input [(ngModel)]="training.progress" placeholder="progress(25%,50%,75%,100%)" name="progress" class="form-control" id="progress">
+    </div>
+
+    <div class="form-group">
+        <label for="commissionAmount">COMMISSIONAMOUNT:</label>
+        <input [(ngModel)]="training.commissionAmount" placeholder="commissionAmount" name="commissionAmount" class="form-control" id="commissionAmount">
+      </div>
+
+  <div class="form-group">
+    <label for="rating">RATING:</label>
+    <input [(ngModel)]="training.rating" placeholder="rating" name="rating" class="form-control" id="rating">
+  </div>
+
+  
+
+  <div class="form-group">
+      <label for="startDate">STARTDATE:</label>
+      <input type="startDate" [(ngModel)]="training.startDate" placeholder="startDate" name="startDate" class="form-control" id="startDate">
+    </div>
+
+  <div class="form-group">
+      <label for="endDate">ENDDATE:</label>
+      <input type="endDate" [(ngModel)]="training.endDate" placeholder="endDate" name="endDate" class="form-control" id="endDate">
+    </div>
+   
+    <div class="form-group">
+        <label for="startTime">STARTTIME:</label>
+        <input type="startTime" [(ngModel)]="training.startTime" placeholder="startTime" name="startTime" class="form-control" id="startTime">
+      </div>
+
+      <div class="form-group">
+          <label for="endTime">ENDTIME:</label>
+          <input type="endTime" [(ngModel)]="training.endTime" placeholder="endTime" name="endTime" class="form-control" id="endTime">
+        </div>
+        <div class="form-group">
+            <label for="amountReceived">AMOUNTRECEIVED:</label>
+            <input type="amountReceived" [(ngModel)]="training.amountReceived" placeholder="amountReceived" name="amountReceived" class="form-control" id="amountReceived">
+          </div> 
+        
+            <div class="form-group">
+                <label for="amountToMentor">AMOUNTTOMENTOR:</label>
+                <input type="amountToMentor" [(ngModel)]="training.amountToMentor" placeholder="amountToMentor" name="amountToMentor" class="form-control" id="amountToMentor">
+              </div>
+
+                  
+                    <div class="form-group">
+                      <label for="fees">FEES:</label>
+                      <input type="fees" [(ngModel)]="training.fees" placeholder="fees" name="fees" class="form-control" id="fees">
+                    </div>
+                    <div class="form-group">
+                      <label for="status">STATUS:</label>
+                      <input type="status" [(ngModel)]="training.status" placeholder="status" name="status" class="form-control" id="status">
+                    </div>
+
+
+  <button class="btn btn-success" (click)="createTraining()">Create</button>
+</form>
+</div>
+</div>
+</div>
+</div>

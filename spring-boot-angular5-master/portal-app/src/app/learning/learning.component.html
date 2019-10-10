@@ -1,0 +1,83 @@
+
+
+
+
+<style>
+h4{
+  color:cornsilk;
+}</style><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+          <h4>START DATE</h4><input type="text"[(ngModel)] = "startDate" placeholder ="startDate" name="startDate"/><br><br>
+          <h4>END DATE</h4><input type="text" [(ngModel)] = "endDate" placeholder ="endDate" name="endDate"/><br><br>
+          <button (click)="findtraining(startDate,endDate)">SEARCH</button><br><br>
+        <li><a routerLink="/payment"><b>ADD PAYMENT</b></a></li>
+        <li><a routerLink="/training1" ><b>VIEW DETAILS</b></a></li>
+        <li><a routerLink="/trainerdetails"><b>TRAINERS DETAILS</b></a></li>
+       
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/aprofile"> PROFILE</a></li>
+        <li><a (click)="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+     
+
+      
+     
+          <img style="width:1465px" src="https://png.pngtree.com/thumb_back/fw800/background/20190429/pngtree-simple-opening-learning-background-image_110171.jpg" alt="Image">
+         
+            
+             
+        
+  
+
+<hr>
+
+
+
+</body>
+</html>

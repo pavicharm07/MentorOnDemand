@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color:black;
+      height: 100%;
+    }
+    body{
+      background-color:floralwhite;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    h4{
+      color:floralwhite;
+      text-align:center;
+      font-family:'Times New Roman', Times, serif;
+    }
+  ul{
+      display:block;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;color:brown;">ADMIN DASHBOARD</h1>
+    <div class="collapse navbar-collapse" id="myNavbar">
+       
+        <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/index"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            
+        </ul></div>
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>ADMIN</h4>
+      <div class="vertical-menu">
+            <ul class="nav nav-pills nav-stacked">
+        <li><a routerLink="/useradd">ADD USERS</a></li>
+        <li><a routerLink="/users" >DELETE USERS</a></li>
+        <li><a routerLink="/useradmin" >BLOCK USERS</a></li>
+        <li> <a routerLink="/mentoradd">ADD MENTORS</a></li>
+        <li> <a routerLink="/mentors">DELETE MENTORS</a></li>
+          <li><a routerLink="/mentoradmin">BLOCK MENTORS</a></li>
+          <li><a routerLink="/technologies">ADD TECHNOLOGY</a></li>
+          <li><a routerLink="/technology">DELETE TECHNOLOGY  </a></li>
+          <li><a routerLink="/training" class="w3-bar-item w3-button">CREATE TRAININGS</a></li>
+           <li> <a routerLink="/trainings" class="w3-bar-item w3-button">CURRENT TRAININGS</a></li>
+           <li><a routerLink="/payments" class="w3-bar-item w3-button">DELETE PAYMENT</a></li>
+      </ul>
+    <br>
+  </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>USER QUERIES</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by farook, Sep 27, 2018.</h5>
+      <h5><span class="label label-danger">java</span></h5><br>
+      <p>Since java is the most filling course,i want to join java course in end of november,will i get vacancy during november or i want to join in starting of january.</p>
+      <br>
+      <br>
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Admin,sep 28,2018</h5>
+      <p>Hi farook,The availability of courses and trainings is completely based on the demand,The users are showing more interest to join java courses,so its filling very fast,if you want to join course immediately then go for october batch 
+        or join at januray.We dont have java course at November,Thank you.,
+      </p>
+      <hr>
+      <br>
+      <br>
+      
+     
+      <br><br>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUVFxUVFxgYFxgaFxcYFRcWFhUXGBYYHSggGBolGxUVITEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGhAQGy0lHyUtLS0tLSstLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAN8A4gMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAACAAEDBAYFBwj/xAA+EAABAwIDBgQEBAYABQUAAAABAAIRAyEEEjEFBhNBUWEicYGRBzKhsSNCwfAUUnLR4fEVJGKCohYzNESS/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAKBEAAgICAgICAgEFAQAAAAAAAAECEQMhEjEEQRNRIjJhBXGBkaFC/9oADAMBAAIRAxEAPwDf37JFwQkotVzaRugpRscok4ceiSWxdkpCGybiFLiJ+wokgJw1AEri6BolBRgBRAp0vYEroTR6IQUdk0J9jNRZuqhe4Dms9vBvdSwwggudyHfpJSF0aN9drfmIHmYUdHaFN9mva7ycD9l4ft/eGpiHkvNhoOQ9JuVyKONfIyOyxeZNvUHVarG2iHM+jweoTZgvHN39+8RRMVHcan0d8w7td+hXqOyNq0sTTFSi4OB16g9CORUSTiXGVl5xTFJNKkoRcmL+6dyGExMH1Sk9Ezk0qb2MdxQApw7qiceypANFkLZCfJ0smAcgYp7JJ+I7okmKiNzRzThISkQgQf1ThRylnUtMdhyhDEs46pNbzlPoOw2yjbUIQyhJRYUS505PdV2meZUtMdUWMlaO6F9SEN1VxuJDWklCER7RxgZJkae3mvDtsbXNaq5zpgE5b8uvqbrSb97xvDW0R+aeJ1ABgCe91iMPQdUd4QSPVNL2Q3b0NUxAJjr+qHjZRb/a72z913vMFv0/Xkjr7p1KYdAM8rK/lJWNnDpYkHUEd4Wg3R3hODxDXk/hO8NQDQtP5vNuvlKy2KpPpOhzY79UVOoXCEPaJT2fS9OsHAEXBEg9QdCizLIfDHaHFwTWuPipONM9cogs+hj0WuyLE2TsLMELvNAQmCodDua5MXGLhI1U4cCjoLA4g6J2uB5oiAo3U0rAkhASeiA5hoUhUPNABZj0SRcfskjihkIRAqNxTZk6J0S5kpUeYpXSQaDajJQZknOTD2FnRB6ilIORQ2TSnBQApEodggnVe65+0HAtI6G46jXX96K1VsFx9sVC1pLRNiTOg7o6QzzPebZjq9ZuTMX1avCE3a0co5kiCTyuFvN3d26OGZkBaXcySAT5AqPdXZEjC1nXLmPqt6g1ZdJHKzwPRV999i4gnOxzSINnMB8vEptmix8fyNNQwYaTYT5KXEUgRcSvP9zMXi21+E4ktgEtMlo1kNJkg9phaDb++lPDv4bmOcexYI//AEQk36LvRkN/NmEgkN0uPKNPuvOmuvzXuNHa9HEssCCROVwF/wCkiQ73XjG8LBTxVVo0DrewP6rTFJ9HNmhVNGo3E3lOFrAE/h1SGumLGbH6r3OnUJAI0IXysDJnp7+6+jtytpGvg6NQ3JbB/wC2x+yJx2RBvo7pJTWSTEKWy0CWd0ERyRmeqRJRYUCXIQ8ohKIIsaGBScmegHdNAHkCSCUkxg5UEJg5FKCBiU5KaEpSYJjglIHqEIRZSgLHJTE9EBekSlYEghKpprp9lGnVDskLuUiVm97GkU3ZbZpaRyiCT9vqtDwuUkdNLe4XH2/g3OZqXa+8WtpyKTBmZ+G+8FSqHMe0f8synTDubmkOgEdg0L0Optylkh8aaLyzcjC8J9UtdLXNYHg2LarZzNjpqQeYcFo8VRIPGZEt/K4SD18ipk96OnF+Udm02ThmGaoYG2kaTcdlk9p7mtxLnVBcuPivGmlwuOzblRpPzMa65yjM3zHTyXa2PvAQXQcwN5j9FO12ayx12VMJuo3BtfUvzdl5TGjQF4xvDVms8TJzvLj1cT4gOw09F7Dvlv3SpNLHyahYS1oGsy0EnRom/ovCitsUX2zizNJ0g2yvb/g7iXPwZYZ/De4DpDjmH1leINXu3wioFuDJ5F5g6SBP6k+6rJ0Yw7NvlKeUDnQmLpHZZmwbz3CdoQMYEswQMJ6CSibUCdwBSYhi9CTPSE/DTOplOwGydwnQ8MpItDIS3ulCXqnCZA0IfROmLh1QPQhPkhce6WdvVAagSEww/wBUbSq5qhOKp5IHZaCSr5ypackwNTyRYtEjU9al4ZdYcus8iPX7K/g8NSbUZTqu/EdozlIEwTzMfZR7SpuzPzakkgf9OjI9AEpdFQ26Mhj4kmACelpS2bjGQWVB/kJtr0TquQ5hJ5rM64aR0Mbs/Dtl4PeCsbtjfOlSLm0gXvmNIaD3PP0XZxbHEHVeV7WpxWf/AFFXjipPZjnytLRFjcQ6q91R7pc4yT9rcgq7mJypWi3NdlHFbIAvoP4b0w3Z9ENM5hnN9C8zHaBC8AFLXsvoDcH/AOBh+1MLGZcOzTOcecISe6ENTKDQkISypks6BglicSFJITiErEIVeyRqJ8o6oS4JjHzefskhzj9lJKibZVzOOghAQ7r9Ecjuhd2QIYtHMoTHmmzlOQhfYDEjolZMYS9EMpCyjsE4iUyu7Lw2eq0QYmT0gX+sQhIGXNm7HNQZj4G8up7x0XQocChUymqwPj5XFo10N7ys7gN8GVdoBkFjQHU5OrnSMst/LcEey5u/mHc/FktAIyNBuJGg083BVairNsfjuWThkfG1Zst5djmuwFlqjbtMxBBlpB6g/qpMNSeaIGLNNtQeHM11j0N4ueihxmMqtwLatIZnimwwL2gB0arzzHNxWKABFQudyFmgTzcTJnoI9U5ySejGMW/fRstp7Ec28Zh1F/cLPPwYmy2eysWMPQpU8RVHEDYJPTlPkIE9l0K2V7S5rGPMEt0hxiRfkpeNPoazNdnnD8ALgjVeW7+bu1KNQVTTc1j9CREkfovoPBVcU7/6tKiernT7BoBP0XD+KOEpVMK0YgkkXaGWl0RpOl9DKcIJbsWSV6o+b6mHsjo0YF1K8Fji08jEfqOoRsK3vRnRLgsOHeE8wR6gWXrPwvxwdhDT/NReWHyIDmH2P0XlFD5heJMe62/wtxBGJqsOj6YPrTcL+zysZLQ4nqHERAoJRNCksKOyYtRCi4pntAGslAwcqYNTh6cOHRFC7BcIQqVwHJDHdIKEAknlOmOitlHQpwwIinJSokiyBBbopjCANCEMAlCR3RmmEBbCYhgmZiaratJlEAuc9riD/KMwM9BGb1ATkLp7I2nhQ5tMVGcaMrheZkkNmI56ShbfZX+CWpujhH1n1XMJe85j4nASOcA+q5O2t6MLnyvo8RzCWySZlrovlBnQG/VUKG3TT2waJzEPeWfNYBzC75fOEz90KprYgF2VpzPp1ZyuL3aixnQEf7RNt/qaS5aeT60bjd3bdLEsPCEZIBA0Eza3kubtDeuhQr8JtMufmDSQA0XE68/8hUN38dQwoqUqJ4oD4e7PfNH5WxoL+qo73bJeyo+sxpIe2IgkyflcCNHNMegQ5utGMYLl/BPv7jS11F9Mj8SmbwDI018nFdjdFlX+CzgA1H5nAWA6N7ckW6eGdUoNOIoiR8mYCYOsA3Am/qq+828L6BFKg1shribWaGCSY6ckKl+TN5zi8axxjtezPUd5X4fFN4peYOWpmJJGbXKOxE39F3t+8A+tSp1KTOLkc14AvNwQYGo8lEzY7NosZWqMNJ4ID4/OBeJ5fou/tguo0mCj4QC1ugIDYMa8rJxVRd9Blli/Dh+3s8Y3k3ArHBnFcNwq0yXVGkGXU8okgf8ASR7ErzhpjuF7qNs7QNUtaXVA03GQZXNPIkC0hZ/4i/DnhsGKwlItaRmq0pnh2Blo9wQE47WheTgliptrf0eXtI15j7LYbgVB/HnKLFlSB2sVjs37C1fw7vjWEcmPn1YUM5z11ikmyjlO03UFhhyGU8pSmFgn1TAoiUwKQDh5RCU2ZJCBMeUkpPRJMqwYTQEeZJyCCMpiiKjJCRRHmKZzkYKFxQKx6LZcATlBIE9JsuD/AOgqrKn4Vdj3BwffKHAzMutJHaVqsBsVtcBzyYY9rgBo5zbiewMGFx95cRUpbSoinANRtMZgLgl7mHzGXl2T46tlQUpOoku8GAwNPGMr1a5pVwW1YJhjsvh5iB8t7rL/ABTx9b+IY1ry2k1oktvJdcF0GSIDIHn1Wr392Nha7mcfEcGplIaeRBP5hyvoZCw+2dk1KfDw5moKtmVW3FU02ZmN1MEgDtZErvo0nxcIvlbXr6L9TBYnFMpYzD0sxcC17DDYdmMG8SIK9W2JjnvpM4ga2plAcwODiCLG4Pr6rIY3d6t/w6lRpl0h2d4MzBk5QJ5TpdcbZjq1Gq1lJjg9xA8Ts0O7SGlg85S/WX9xym8sFF/+S7vttvGMxZYyqWMbkLR1sDeNbytBi9hOxeSuyoIc1pewgwTILhI5SNCOS6m0tiB9Timo1phou0EW1vIlXcFRZQpEh2aAXOMzMCSfoqptu+icueMoQUFTS3/Jzdu7UOBoUw1odJIMmAIEuPmSVyBvvcCrSa5jrS0tdbu0Eweyj2xvjShor0C8Ektym4ECJ9+R5J9j4XA48OLKVVpYROYRc6Qeein9pLi9B8Mlj5yi6+zXtr0qdIPENZAIgayLQBqVm96oxVEPpvOWm4FzevQ5efOF2NqUKdQNpZwx7RLBmEyBAlsyQsFsJ1dmPNGo1xLszao5Fh/N0i8hVkbuvQeLh+RSlfSvfs8h3iw/CxVQNjKTnaB8sPvp0mV2vh3tKmzGNzAjM1zBAzDOYyntp9VN8W8FTo7Q4VPRuHpTJkyS8mfSFk6BfTLaoBgEHMOUEanpJCGjni7Z9DgpQoaFWWg9QD7iVNKSLaFdHw+hn7pBJArGyFMQjDrIUDADTOqmahHbROGpWCDSQ5kkxjlqEoatXLcnoNJubDRBxpggG9piIvF5QJhFqCAnLh7KLigujmgLod3p9UDlIWlAWR280qENtLel2FbSp0aWcG9R5BhpJNunS5MLo7LxlHG+PhN49A6OEOY7UX1hc5vn/ZUhtJ2GrPfTYJfSymLQ6Tkd3IhPk099FRjel2ZbbeHxNbEPZWpPNUkACfCLxntqIFgDFzqtLiMJSwbcIKznNNKrxGhozQS1zC2P5PHB80W6u81fivZjHNDcste6G+KRaWjmOvRZ/bL6vGq4ilNfi1Q0GZDKLHBzozaSQBboUotdo0nBxlwZe2pjMUzEmtSqVG0KtQOBa4lgBgQRyMdQtbsLar3YV9SOJUp8TKTcugZgAYBi8QqmA2Y5oacPD6NXK403mHU8wkupu5iD8pXL2ztmtg6gpCg3JAdmFQANBMSRFrlWlW2Tkm8lJJaOLiN46mIccxqg6Q2Lnu5xGXyAK0+4jMTT4vHB4T22zOMz5O7E+y6Gz6NIgVabW+IZi4NAJJ1v5yuRsfeylicQ2iGPbmDiHOIuWiYgHpPslGHFhxlki+Meuwdu7JwdMB9fEvETAkXkzZoaSrGydqUaWEqnCVA4TJLs2aTA5gaDouDtPdnF18Wc1IimXRnMFobP5b6RA0+60O0sPTwdBoDfCPCBoCYuXnQdU1q30aPLNwWO7X0YTYG0XjF03Zi5+bxxJA/EHPnaSt1vVva2k0tolv8AEPhodAJYzUuJIsBfVcPCbSz4epWbSADSQ0M/OQPIc+fmvO958ZVdSlrDTa61QTJJJPPUAxp2Kla99kbi9rr0UNr7SfjsZUqk5n1Hta21iGgNB7CwPqvUNubm/wANswFzzOQio3kSfGwW1hw9yvPNxt3jXOdxIDb2XouNwtSo0UWPfVfF8znFtMdYmAVM5q6Hig1+R0N1ab24SiHXim0A6kiJE/b0XYzqChRFOmxgnwtaPYQpG+SLZmG1yJDUfAuU7STBVCod7jyRApQEkrHQ6e/JMWpgmIOUkGVJAWVzMguIkEwAXCx0kaHkmdiwSBBJPSLe8dFNVw7ZLukaAcvSVH4XwYM69/ogdCdUGnMKOjReC4yL3AyxHmQTKnLM0GXDIdOR9OYuge+OYQKgjPkhef2VGX2kg25c1RqbWbMXbH8wLQfUoEdFcfHfOTyED2XVB8GYEG1o7qji6BDdFnKzbCt2cbGOGUldLdrY1TG7Oq5H8Go15bTcdCMgc7N1aTUd7BUzgzU/Db8z59AAS4+gBWz2ZiKGIw9SnQPDc8H8MESLQYA0JA+qqGnZWa2jjV6tShXwhLpYKYo1YM0p08B7OA1uBy1Rb1bnvxVXjMqtaIALXTBiOmo8IMLn7t1KIq/wdduZriQGusWumLf45R0Uu+uwMQMQXU2vfTeBDWm4cAGkSWu6SnytWzNraRpcDh2soim1wflBByxGYySO2qyO7u51RtZr8rmFj82dxBA0+UDUnxfRWd08DUwNOpVxGYNeQBTgk5rwe3RaTY28FKpUyAOa4/lcBeBMyJCu4tII5MmPkovT7Ku297mUi5lJnEc2cxFwI1JjQDqVXfWO09nVIa1tSSAJtmZDgZ5Agwq2K3ZwdHEOdWqyHvzCkPmbndN7m0nVT77V24bCinRAYx7spy8m2zeZKnlLd9Amk4uPZm9sbOFLB0sMysHZqhD3sv4nGcoA5TAV7Fbv0alNtKo3M1rYBvmmILsw1PNSbv4Th4ei0CMzXVDb+YiL8rLp29f3yS7Hkk5Nt9mc2RswUHOo0/lBEOOsEA+62+w8C2m2ANbk8yep6rgYzw1GvH5hlPm2/wBj9FptlOkBSo7NE7RR2hSyvIve4UDVe244hwgEz0iB5rmBrusxy/yrMmqZMheQBz9P8KkdouzCGEiYPIgjubK/lBuk0IGUQ7ym4aTXpgTT21QoOIk0hKxNB27JkoCSLCiJ2JcbcM+4+wlS352XNxldpdlJJkgQC4xz/L8h1uVdw48MAyBaQZPveUxWSwq7y7MZjLAi155ydCEmB0kRbudeik4aARXzXhC4AC4n99FNlHSEuC12qQXZE948I9fbRKvVkKvif/cgaNAH6qHG4gNYZU8jpxxqJyhs1+MxdKlTe5gYS+o9nzBoEZQeRdMX5Su/jsJQ2fiKeIDnENIaabPGcpblzT+UifVTbkbIq0azslVpLiX1o8TYJhjAbeKGkytPt3DFjHPw9Ck6sTbMQ0A83E81pFPiY5G3Kr0zJ7f2vS4tLF0OEcwMVC12aRZzXCfmuIUm097MZ/Dsr06LMskE3dcWB5Q0xErKbV3yNQuoYnKA0kPNGTcGIhwg3HVTbD+JeHw1LgmhUqsv/KIk3sTeddUcqZ0S8WSgqjbOxtLaj9o7O/DbmrcRoc2nJtdwdF4GnsUW4myn4NlStigWF8NbmPytGpJ0Ek/RZvbHxBY9w/hcOaQIvmayc3UFp0hVdv73VawY1tRzqcNL6dVrYzWzNzgyR37o09/RusOZYOPHT/2jq77YWs944L+Kyq7VvzBx0DiNG/S19F0tu7c4NOlTq0hiKga0uaRLc9mggQTJM8lU3P3pwmGoFtWkc+Yu/DuDIA1cR0VjEfELC5+LSwQNWMsvcLAHsE0l2iPjzNRj8fX/AEt7Or4l7Q6uG0xlJDAI1IDR5NDT7norOT36zP0K4VTfthz5qZIMFsNY3KZJdzJg25mYlUn76s5UZ83D7hqlqmS/Dzyd8KNViMJnbe7hdp6H06rrbtyWX9f7Lzo79OkZaDZmwzmZ5Wyr03d9rhTBc0Nc7xOAvBOonmk3RLw5MX7qiTa1OwK5ZZ2Xex3yO/pJ9QJCyWA21SrGGOv0Ig+iL2ZfHOW0i+5gTho5WTCpyBTtcEzMf6hM6mOqdzlGXIAF1ONEBCnz2QkJUAuJ2SQp0qYFelgKbdBEmTc3I6yrgIUIACIKiUgy5CUJP07pnun/AAgXQ6Awk7RASkyik0S5x7n7rgbbqGpUp0G61XhnkCZcfRsn0Xdy+GVyN36GfE1Kp0pgMb/U/UjyA+qyR1N8Ylja2+9AYZjKNU8TMeM0tIcMtoktgm3VZyr8QsQ0/wDL+AdXBpcfOBELM7cw/DxVdnIVHEf9xzD6OCqcSFv/ACel43iYePKWyXFVX1XOfUMve4ucdJJMmwsmIA5BC14TB4J7J0elFQS0TMciNTr/AKVbiJgZTL+RLos8SfJLj8gqpqlOHQgXylkv63/RM6oef7/soAecpp5nRBLymy+HWzuLXNQiW07N6Z3aH0En1C9ooU4hef7jYbgUcPmEGrmqnrBBLZ9IW+bjGRMrG1Z4fl5HPJYWJu0iNQR9F4NhMVB1uDqOxiV7dj8a0U3uBiGPPs0lfO2HrEQVUWdn9LlXKz1rZNY16Yfmhw8LiBzGh1XVp03CDmvztY+nJZj4eEmlUPIuA9QL/cLVyhHleXCMM0lHodridU5B6pSlmnVM5GE1GGjoo8yNhQND27JIuN+5SSplFRjY6+6ISoy+E5cmQE0ie6jLr/v/AEi5aJSEDYAN/wDcpPNj+seSTm/uShJhKXQ62ijtZ+SkeVkOxcNw6LQbOfNR3WXf2ED0S2o3O+mw3zOl3k25+yuvnp9lnBGuaXo85+Iuz8lZtYDw1Bld2czT3H2WRzL2XbGzmYik6k/Q6H+UjRwnovIdrbOqYeoadQQRoeThycDzC0Wj0PD8hOPF9ohlL6D6lQtcnDlVnfzvokLvQJi4m2gQzzQl6QOVdkggJFyiL+iBzwEWQ8iRMX9VZ2VhX4mvTosaXOc4DKOn5j2AEmVQoNLz2XRw2IdRIdScWOE3aSDex0RtkrlNWtI9Vp42doU6LXAtoUnl8ciQGhvpK1NIjxO6WHoAf1Xk25zjTFTEPdDn2BOpa0y495db0Ws/41lp+NwbYucZ0Gp+llnVM4MiV0jsbw4xrcPir3bQcB5vY7+7V4rg2OeQ0AkkgADUk2AC222MdUfg4yk1Ma8FoAM5BEQOuVrZ8119z91Bh2irVg1joOVP+7u/JNG2PKsEG32dvYWzxQoMpfmAl39RufvHorzik1FH7srPLnJzk5P2MPMIvUe6ZIBBNDh3QeqL2QweqhzVM4ENyRcyc08hGkeqQNFmUkEnofokgVFb0Kab8x7qUk+fooiO56JiHnsnDv8AX+UB80pHqgCSepUj6BMFS7OwuczoBquliYaolI2xx3bMw4E1idA1kCe5v9kZd1hTYx44htyE+5hVXlEeiMruQRd0/fuqe1NnUsQzJVYHDUG0tPVpGhUznn+yB1Q9VZCbTtHn+29yX0mufSqB7WtLiHeFwAvqLH6LMjB1YkU3EdQJH0Xqu23B9GpTJIzNInp0XmmzsY+i/LrlIJbycAbjtb7rTHBS7NX52WBRq0ntEuY4DqWkD6qq6tdbwMFWm8Ou05T6GSPXRZKvsJ2eGEGTabLOSUZNHRDy5ZI2c59Q8kNOkXFS4nCvpuyuEHzB7clew1CB3TR1YsfzS2G1mVoH1Cic5SVDdRuPcpnoOukWv+I1cjWB3hYCBYTBM3PNSYnaD6oa0wAAAYnxHq6SqCsUHqaTZMMUXLo9A3IxTWw2o4ueBlpucZyA6sb/ACg6rbCp1XkuzMUQQen7C9N2Xi+LTa86mx8xqpapnH/U/F4Vkj0XeIETXBcbauzqlQyyu9kaNFh/4wfdcKpSxtEmKmYd3TMdnJ2eRZug2U+RY3B72OBy1qQtqWWPqJg81sKbgRI0/vohOwTD4ZhCW/uELatyCCOeuv8AZGTCYx/VMmnuklYH/9k=" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h5>Anja <small>Sep 29, 2015, 9:12 PM</small></h5>
+          <p>Keep up the GREAT work! I am cheering for you!! The best courses provided by you..</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="https://i.pinimg.com/originals/82/30/b3/8230b3e601bd66e593423e8004058d84.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h5>John Row <small>Sep 25, 2015, 8:25 PM</small></h5>
+          <p>I am so happy for you ! Finally. I am looking forward to join more courses .,</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="https://cdn.pixabay.com/photo/2017/04/28/21/35/stylish-boy-2269508_960_720.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h5>Happy to be part of the course<small>Sep 25, 2015, 8:28 PM</small></h5>
+              <p>Me too! WOW!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

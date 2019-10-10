@@ -1,0 +1,95 @@
+<style>
+    h2{
+    text-align:center;
+    
+    font-family:'Times New Roman', Times, serif;}
+     th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    td,th{
+      border: 1px solid black;}
+      .button {
+        background-color: navy;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 0px;
+        cursor: pointer;
+      }
+    </style>
+    
+    <body>
+      <a routerLink="/signin" class="button">BACK</a></body>
+      <p id="demo"></p>
+
+    
+  
+<div class="col-md-6">
+   
+    <br>
+    <br>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+         
+        <th>PROGRESS</th>
+        <th>COMMISSIONAMOUNT</th>
+        <th>RATING</th>
+
+        <th>STARTDATE</th>
+        <th>ENDDATE</th>
+        <th>STARTTIME</th>
+        <th>ENDTIME</th>
+        <th>AMOUNTRECEIVED</th>
+       
+       <th>AMOUNTTOMENTOR</th>
+      
+   
+     <th>fees</th>
+     <th>status</th>
+   
+     
+   
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let training of trainings">
+        <td class="hidden">{{training.id}}</td>
+        <td> <circle-progress
+          [percent]="training.progress"
+          [radius]="25"
+          [outerStrokeWidth]="8"
+          [innerStrokeWidth]="4"
+          [outerStrokeColor]="'#808080'"
+          [innerStrokeColor]="'#C0C0C0'"
+          [animation]="true"
+          [animationDuration]="200"
+        ></circle-progress></td>
+        <td>{{training.commissionAmount}}</td>
+        <td>{{training.rating}}</td>
+        <td>{{training.startDate}}</td>
+        <td>{{training.endDate}}</td>
+        <td>{{training.startTime}}</td>
+        <td>{{training.endTime}}</td>
+        <td>{{training.amountRecieved}}</td>
+        
+        <td>{{training.amountToMentor}}</td>
+       
+        <td>{{training.fees}}</td>
+        <td>{{training.status}}</td>
+     
+      
+      </tr>
+      </tbody>
+    </table> 
+   
+     
